@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+</style>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script>
+	$( function() {
+		/*
+		$('tr:odd').css('backgroundColor', 'black').css('color', 'white')	
+		$('tr:odd').css({
+			'backgroundColor' : 'blue', 
+			'color' : 'cyan'
+		})	
+		$('tr:even').css({
+			'backgroundColor' : 'yellow',
+			'color' : 'orange'
+		})
+		$('tr:first').css({
+			'backgroundColor' : 'brown',
+			'color' : 'red'
+		})
+		$('button').on('click', function(event) {
+			//console.log(event)
+ 			const btnEl = event.target // 클릭한 대상(button)
+			//alert( $(btnEl).html() ) // btnEl.innerHTML
+			})
+		
+		console.dir( this ); // (=) event.target 
+		if($(this).html() == 'Click Me Show') 
+			$('table').show()  
+		if($(this).html() == 'Click Me Hide') 
+			$('table').hide()
+			})
+		*/
+		$('table tr')
+		.mouseover(function() {
+			//console.dir(this)
+			$(this).css( {
+				backgroundColor : 'orange',
+				color : 'red'
+			}).mouseout(function() {
+				$(this).css( {
+					backgroundColor : 'yellow',
+					color : 'navy'
+				})
+			})
+			
+/* 			$('tr').on({
+				mouseover : function() {
+					$(this).css({
+						backgroundColor : 'cyan',
+						color : 'white'
+					})
+				},
+				mouseout : function() {
+					$(this).css({
+						backgroundColor : 'white',
+						color : 'cyan'
+					})
+				} 
+		})*/
+	}) 
+})
+</script>
+</head>
+<body>
+   <button>Click Me Show</button>
+   <button>Click Me Hide</button>
+   <table>
+     <tr>
+	    <td>번호</td>
+	    <td>종목</td>
+	    <td>수량</td>
+	 </tr>
+     <tr>
+	    <td>1</td>
+	    <td>사과</td>
+	    <td>100</td>
+	 </tr>
+	 <tr>
+	    <td>2</td>
+	    <td>바나나</td>
+	    <td>200</td>
+	 </tr>
+	 <tr>
+	    <td>3</td>
+	    <td>수박</td>
+	    <td>150</td>
+	 </tr>
+	  <tr>
+	    <td>4</td>
+	    <td>딸기</td>
+	    <td>300</td>
+	 </tr>
+   </table>
+</body>
+</html>
